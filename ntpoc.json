@@ -1,0 +1,14 @@
+{
+  "openconfig-system:ntp": {
+    "servers": {
+      "server": [
+        {
+          "address": "1.2.3.4",
+          "config": {
+            "address": "1.2.3.4"
+          }
+        }
+      ]
+    }
+  }
+}
