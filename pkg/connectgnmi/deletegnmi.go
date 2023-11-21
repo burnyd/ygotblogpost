@@ -16,7 +16,6 @@ func Delete(Target, Port, Username, Password, ntpserver string) {
 	}
 
 	paths := []string{"/openconfig-system:system/ntp/openconfig-system:servers/openconfig-system:server[address=" + ntpserver + "]"}
-	log.Print("\n trying to update with ntp server address: ", ntpserver)
 	log.Print("\n Trying Path: ", paths)
 	var origin = "openconfig"
 	ctx := gnmi.NewContext(context.Background(), cfg)

@@ -56,9 +56,13 @@ func Get(Target, Port, Username, Password string) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Print("This is a string version of the servers \n")
-	fmt.Print(string(Get),"\n")
-	UnmarshallJson(Get)
+	if len(Get) > 0 {
+		fmt.Print("This is a string version of the servers \n")
+		fmt.Print(string(Get), "\n")
+		UnmarshallJson(Get)
+	} else {
+		fmt.Println("Get request did not receive any ntp servers")
+	}
 }
 
 func UnmarshallJson(data []byte) {
