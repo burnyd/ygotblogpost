@@ -33,7 +33,7 @@ func Get(Target, Port, Username, Password string) {
 		Username: Username,
 		Password: Password,
 	}
-	paths := []string{"/openconfig-system:system/ntp/servers/server/config[address=*]"}
+	paths := []string{"/openconfig-system:system/ntp/servers/server[address=*]/config"}
 	var origin = "openconfig"
 	ctx := gnmi.NewContext(context.Background(), cfg)
 	client, err := gnmi.Dial(cfg)
